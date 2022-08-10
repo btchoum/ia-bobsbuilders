@@ -1,0 +1,45 @@
+classDiagram
+    GameController --> Map:map
+    GameController --> Character:character
+    
+    class Position {
+        -int x
+        -int y
+    }
+
+    class Status{
+        string message
+        Position position
+    }
+
+    class Map {
+        string name
+        -int xLimit
+        -int yLimit
+
+        +calculatePosition(Position pos, string dir) Position
+        -validatePosition() bool
+    }
+
+    class Character {
+        string name
+        Position currentPosition
+        int moveCount
+        
+        +move(string direction, Map map)
+        +getPosition() Position
+        -incrementMoveCount()
+        -updatePosition(Position newPosition)
+    }
+
+    class GameController {
+        Character character
+        Map map
+
+        +init()
+        +moveCharacter(string direction)
+        +createCharacter(string name)
+        +getStatus() Status
+        -getCharacter() Character
+        -getMap() Map
+    }
