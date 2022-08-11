@@ -11,6 +11,6 @@ Scenario Outline: Start the Game
     Then the Game creates the map and sets the character position to <characterX> <characterY>
     Examples:
 
-        | startX | startY |  characterX | characterY |
-        | 8      | 4      |  8          | 4          |
-        | 4      | 3      |  4          | 3          |
+        | characterX | characterY |
+        | 8          | 4          |
+        | 4          | 3          |

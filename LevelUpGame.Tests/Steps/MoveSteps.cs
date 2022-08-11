@@ -22,7 +22,7 @@ namespace DotNetExample.Tests.Steps
             //   _scenarioContext = scenarioContext;
         }
 
-        [Given(@"the character's starting position (.*) (.*)")]
+        [Given(@"the character's starting position is (.*) (.*)")]
         public void GivenTheCharactersStartingPosition(int startX, int startY)
         {
             this.startX = startX;

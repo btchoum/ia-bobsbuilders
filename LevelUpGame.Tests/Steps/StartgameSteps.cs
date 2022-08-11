@@ -20,9 +20,9 @@ namespace DotNetExample.Tests.Steps
         }
 
         [Given(@"the character is created")]
-        public void GivenTheStartPositionIs(int startX, int startY)
+        public void GivenTheStartPositionIs()
         {
-         
+            //Comment
         }
 
         [When(@"the player starts the game")]

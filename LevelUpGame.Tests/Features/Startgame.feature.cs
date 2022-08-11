@@ -76,9 +76,9 @@ namespace LevelUpGame.Test.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Start the Game")]
         [NUnit.Framework.CategoryAttribute("acceptance")]
-        [NUnit.Framework.TestCaseAttribute("8", "4", "8", "4", null)]
-        [NUnit.Framework.TestCaseAttribute("4", "3", "4", "3", null)]
-        public void StartTheGame(string startX, string startY, string characterX, string characterY, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("8", "4", null)]
+        [NUnit.Framework.TestCaseAttribute("4", "3", null)]
+        public void StartTheGame(string characterX, string characterY, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "acceptance"};
@@ -88,8 +88,6 @@ namespace LevelUpGame.Test.Features
             }
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("startX", startX);
-            argumentsOfScenario.Add("startY", startY);
             argumentsOfScenario.Add("characterX", characterX);
             argumentsOfScenario.Add("characterY", characterY);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Start the Game", "    This will start the game and creates the map and sets the Character starting " +

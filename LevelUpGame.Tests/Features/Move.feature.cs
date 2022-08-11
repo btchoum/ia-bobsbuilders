@@ -76,11 +76,11 @@ namespace LevelUpGame.Test.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Move")]
         [NUnit.Framework.CategoryAttribute("acceptance")]
-        [NUnit.Framework.TestCaseAttribute("0", "0", "0", "E", "1", "0", null)]
-        [NUnit.Framework.TestCaseAttribute("6", "2", "6", "S", "6", "3", null)]
-        [NUnit.Framework.TestCaseAttribute("4", "3", "2", "W", "3", "3", null)]
-        [NUnit.Framework.TestCaseAttribute("5", "0", "3", "N", "5", "0", null)]
-        [NUnit.Framework.TestCaseAttribute("9", "9", "12", "E", "9", "9", null)]
+        [NUnit.Framework.TestCaseAttribute("0", "0", "0", "EAST", "1", "0", null)]
+        [NUnit.Framework.TestCaseAttribute("6", "2", "6", "SOUTH", "6", "3", null)]
+        [NUnit.Framework.TestCaseAttribute("4", "3", "2", "WEST", "3", "3", null)]
+        [NUnit.Framework.TestCaseAttribute("5", "0", "3", "NORTH", "5", "0", null)]
+        [NUnit.Framework.TestCaseAttribute("9", "9", "12", "EAST", "9", "9", null)]
         public void Move(string startX, string startY, string startMoves, string direction, string endX, string endY, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -109,7 +109,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 9
-    testRunner.Given(string.Format("the characternario Outline: Set c\'s starting position {0} {1}", startX, startY), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given(string.Format("the character\'s starting position is {0} {1}", startX, startY), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 10
     testRunner.And(string.Format("the character\'s move count is {0}", startMoves), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
