@@ -1,14 +1,20 @@
-    public class Map
+namespace levelup
+{
+ 
+    public class Map : IMap
     {
-        public string Name {get;}
+        public string name {get;}
         private int xLimit;
         private int yLimit;
 
         public Position calculatePosition( Position pos, String dir) 
         {
+            return null;
         }
 
-        private boolean validatePosition()
+        private bool validatePosition()
         {
+            return false;
         }
     }
+}

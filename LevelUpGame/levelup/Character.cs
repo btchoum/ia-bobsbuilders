@@ -3,7 +3,15 @@ namespace levelup
     public class Character : ICharacter
     {
         // Bob the Builder makes the Monters run away
-        public string Name {get;}
+        public Character()
+        {
+            init();
+        }
+        private void init()
+        {
+            this.Name = String.Empty;
+        }
+        public string? Name {get; set;}
         public int MoveCount {get; set;}
         public GameController.Position CurrentPosition {get; set;}
 

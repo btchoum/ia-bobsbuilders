@@ -2,12 +2,9 @@ namespace levelup
 {
         public interface IMap
     {
-        string name {get; set;}
-        int xLimit {get; set;}
-        int yLimit {get; set;}
+        string name {get;}
 
-        void calculatePosition(GameController.Position pos, string dir); 
-    
+        Position calculatePosition(Position pos, string dir); 
     
     }
 }

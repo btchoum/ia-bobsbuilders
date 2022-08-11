@@ -5,6 +5,9 @@ namespace levelup
         // TODO: If your stakeholder wants to call this CHARACTER, change var name for
         // low representational gap
         public readonly string DEFAULT_CHARACTER_NAME = "Character";
+        private IMap _map;
+        private ICharacter _character;
+
 
         public record struct GameStatus(
             // TODO: Add other status data
@@ -25,9 +28,16 @@ namespace levelup
 
         GameStatus status = new GameStatus();
 
-        public GameController()
+        public GameController() : this(new Map(), new Character())
         {
-            status.characterName = DEFAULT_CHARACTER_NAME;
+            
+        }
+
+        public GameController(IMap map, ICharacter character){
+        _map = map;
+        _character = character;
+        status.characterName = DEFAULT_CHARACTER_NAME;
+
         }
 
         // Pre-implemented to demonstrate ATDD
