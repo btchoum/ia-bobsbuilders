@@ -20,23 +20,22 @@ namespace LevelUpGame.Test.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Game")]
-    public partial class GameFeature
+    [NUnit.Framework.DescriptionAttribute("Startgame")]
+    public partial class StartgameFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "Game.feature"
+#line 1 "Startgame.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Game", "![Gamer](./data-flow-diagram.png)\n    I want to create a new custom character, se" +
-                    "tting their name", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Startgame", "![Gamer](./gamerErin.png)\n    I want to start the game", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -75,11 +74,11 @@ namespace LevelUpGame.Test.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Set character name")]
+        [NUnit.Framework.DescriptionAttribute("Start the Game")]
         [NUnit.Framework.CategoryAttribute("acceptance")]
-        [NUnit.Framework.TestCaseAttribute("Erin", "Erin", null)]
-        [NUnit.Framework.TestCaseAttribute("", "Character", null)]
-        public void SetCharacterName(string characterNameInput, string characterNameOutput, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("8", "4", "8", "4", null)]
+        [NUnit.Framework.TestCaseAttribute("4", "3", "4", "3", null)]
+        public void StartTheGame(string startX, string startY, string characterX, string characterY, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "acceptance"};
@@ -89,10 +88,12 @@ namespace LevelUpGame.Test.Features
             }
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("characterNameInput", characterNameInput);
-            argumentsOfScenario.Add("characterNameOutput", characterNameOutput);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Set character name", "    Character creation is currently split to be very simple: the only customizati" +
-                    "on is setting the name.", tagsOfScenario, argumentsOfScenario, featureTags);
+            argumentsOfScenario.Add("startX", startX);
+            argumentsOfScenario.Add("startY", startY);
+            argumentsOfScenario.Add("characterX", characterX);
+            argumentsOfScenario.Add("characterY", characterY);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Start the Game", "    This will start the game and creates the map and sets the Character starting " +
+                    "position.", tagsOfScenario, argumentsOfScenario, featureTags);
 #line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -104,13 +105,13 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 9
-    testRunner.Given(string.Format("the character\'s name is {0}", characterNameInput), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("the character is created", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 10
-    testRunner.When("the character sets their name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When("the player starts the game", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 11
-    testRunner.Then(string.Format("the Game sets the character\'s name to {0}", characterNameOutput), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then(string.Format("the Game creates the map and sets the character position to {0} {1}", characterX, characterY), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

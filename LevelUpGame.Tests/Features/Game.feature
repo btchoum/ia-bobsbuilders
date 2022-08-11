@@ -1,5 +1,5 @@
 Feature: Game
-![Gamer](./gamerErin.png)
+![Gamer](./data-flow-diagram.png)
     I want to create a new custom character, setting their name
 
 @acceptance 

@@ -1,17 +1,17 @@
 Feature: Move
-![Gamer](./gamerErin.png)
+![Gamer](./data-.png)
     I want to move a character a direction on a map
 
 @acceptance 
-Sceharacter name
-    Character creation is currently split to be very simple: the only customization is setting the name.
+Scenario Outline: Move
+    Moving the character increments its move count and adjusts its position.
 
     Given the characternario Outline: Set c's starting position <startX> <startY>
     And the character's move count is <startMoves>
     When the character inputs a <direction>
     Then the Game sets the character's newPosition to <endX> <endY>
-    And the Game increments the <endMoves>
-    Examples:
+    And the game increments the move count to <endMoves>
+    Examples: 
 
         | startX | startY | startMoves | direction | endX | endY | endMoves
         | 0      | 0      | 0          | E         | 1    | 0    | 1

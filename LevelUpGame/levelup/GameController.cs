@@ -8,7 +8,12 @@ namespace levelup
 
         public record struct GameStatus(
             // TODO: Add other status data
-            String characterName
+            String characterName,
+            Position Position
+        );
+
+        public record struct Position(
+            int X, int Y
         );
 
         // TODO: Ensure this AND CLI commands match domain model

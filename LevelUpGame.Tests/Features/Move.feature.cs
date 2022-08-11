@@ -20,23 +20,22 @@ namespace LevelUpGame.Test.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Game")]
-    public partial class GameFeature
+    [NUnit.Framework.DescriptionAttribute("Move")]
+    public partial class MoveFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "Game.feature"
+#line 1 "Move.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Game", "![Gamer](./data-flow-diagram.png)\n    I want to create a new custom character, se" +
-                    "tting their name", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Move", "![Gamer](./data-.png)\n    I want to move a character a direction on a map", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -75,11 +74,14 @@ namespace LevelUpGame.Test.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Set character name")]
+        [NUnit.Framework.DescriptionAttribute("Move")]
         [NUnit.Framework.CategoryAttribute("acceptance")]
-        [NUnit.Framework.TestCaseAttribute("Erin", "Erin", null)]
-        [NUnit.Framework.TestCaseAttribute("", "Character", null)]
-        public void SetCharacterName(string characterNameInput, string characterNameOutput, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("0", "0", "0", "E", "1", "0", null)]
+        [NUnit.Framework.TestCaseAttribute("6", "2", "6", "S", "6", "3", null)]
+        [NUnit.Framework.TestCaseAttribute("4", "3", "2", "W", "3", "3", null)]
+        [NUnit.Framework.TestCaseAttribute("5", "0", "3", "N", "5", "0", null)]
+        [NUnit.Framework.TestCaseAttribute("9", "9", "12", "E", "9", "9", null)]
+        public void Move(string startX, string startY, string startMoves, string direction, string endX, string endY, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "acceptance"};
@@ -89,10 +91,13 @@ namespace LevelUpGame.Test.Features
             }
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("characterNameInput", characterNameInput);
-            argumentsOfScenario.Add("characterNameOutput", characterNameOutput);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Set character name", "    Character creation is currently split to be very simple: the only customizati" +
-                    "on is setting the name.", tagsOfScenario, argumentsOfScenario, featureTags);
+            argumentsOfScenario.Add("startX", startX);
+            argumentsOfScenario.Add("startY", startY);
+            argumentsOfScenario.Add("startMoves", startMoves);
+            argumentsOfScenario.Add("direction", direction);
+            argumentsOfScenario.Add("endX", endX);
+            argumentsOfScenario.Add("endY", endY);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Move", "    Moving the character increments its move count and adjusts its position.", tagsOfScenario, argumentsOfScenario, featureTags);
 #line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -104,13 +109,19 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 9
-    testRunner.Given(string.Format("the character\'s name is {0}", characterNameInput), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given(string.Format("the characternario Outline: Set c\'s starting position {0} {1}", startX, startY), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 10
-    testRunner.When("the character sets their name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.And(string.Format("the character\'s move count is {0}", startMoves), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 11
-    testRunner.Then(string.Format("the Game sets the character\'s name to {0}", characterNameOutput), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.When(string.Format("the character inputs a {0}", direction), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 12
+    testRunner.Then(string.Format("the Game sets the character\'s newPosition to {0} {1}", endX, endY), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 13
+    testRunner.And("the game increments the move count to <endMoves>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

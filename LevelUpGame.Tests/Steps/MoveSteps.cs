@@ -37,22 +37,26 @@ namespace DotNetExample.Tests.Steps
 
         //TODO: come back and finish this method ...
         [When(@"the character inputs a (.*)")]
-        public void GivenTheCharactersStartingPosition(int startX, int startY)
+        public void WhenTheCharacterMovesInDirection (GameController.DIRECTION direction)
         {
-            this.startX = startX;
-            this.startY = startY;
+            
+            this.testObj.Move(direction);
+           
         }
 
-        [When(@"the character sets their name")]
-        public void whenTheCharacterSetsTheirName()
-        {
-            testObj = new GameController();
-            testObj.CreateCharacter(characterName);
+        [Then(@"the Game sets the character's newPosition to (.*) (.*)")]
+        public void ThenTheGameSetstheCharacterPosition(int endX, int endY) {
+
+           testObj.GetStatus().CurrentPosition.X.Should().Be(endX);
+           testObj.GetStatus().CurrentPosition.Y.Should().Be(endY);
         }
-        [Then(@"the Game sets the character's name to (.*)")]
-        public void ThenTheResultShouldBe(string characterNameOutput)
+
+        [Then(@"the game increments the move count to (.*)")]
+        public void ThenTheGameIncrementsMoveCount(int endMoves)
         {
-            testObj.GetStatus().characterName.Should().Be(characterNameOutput);
+            
+            testObj.Character.MoveCount.Should().Be(endMoves);
+
         }
     }
 }
