@@ -23,6 +23,4 @@ namespace DotNetExample.Tests.Steps
         public void Move( GameController.DIRECTION direction, IGameMap map) {}
 
     }
-
-    public interface IGameMap {}
 }

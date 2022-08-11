@@ -14,8 +14,8 @@ Scenario Outline: Move
     Examples: 
 
         | startX | startY | startMoves | direction | endX | endY | endMoves
-        | 0      | 0      | 0          | EAST      | 1    | 0    | 1
+        | 1      | 1      | 0          | EAST      | 2    | 1    | 1
         | 6      | 2      | 6          | SOUTH     | 6    | 3    | 7
         | 4      | 3      | 2          | WEST      | 3    | 3    | 3
-        | 5      | 0      | 3          | NORTH     | 5    | 0    | 4 
-        | 9      | 9      | 12         | EAST      | 9    | 9    | 13
+        | 5      | 1      | 3          | NORTH     | 5    | 1    | 4 
+        | 10     | 10     | 12         | EAST      | 10   | 10   | 13

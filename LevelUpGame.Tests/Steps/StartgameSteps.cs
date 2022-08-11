@@ -38,11 +38,11 @@ namespace DotNetExample.Tests.Steps
             bool yvalid = false;
             int startX = testObj.GetStatus().Position.X;
             int startY = testObj.GetStatus().Position.Y;
-            if (startX >=0 && startX <=9)
+            if (startX >=1 && startX <=10)
             {
                 xvalid = true;
             }
-            if (startY >=0 && startY <=9)
+            if (startY >=1 && startY <=10)
             {
                 yvalid = true;
             }
