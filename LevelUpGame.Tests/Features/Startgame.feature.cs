@@ -76,20 +76,11 @@ namespace LevelUpGame.Test.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Start the Game")]
         [NUnit.Framework.CategoryAttribute("acceptance")]
-        [NUnit.Framework.TestCaseAttribute("8", "4", null)]
-        [NUnit.Framework.TestCaseAttribute("4", "3", null)]
-        public void StartTheGame(string characterX, string characterY, string[] exampleTags)
+        public void StartTheGame()
         {
-            string[] @__tags = new string[] {
+            string[] tagsOfScenario = new string[] {
                     "acceptance"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("characterX", characterX);
-            argumentsOfScenario.Add("characterY", characterY);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Start the Game", "    This will start the game and creates the map and sets the Character starting " +
                     "position.", tagsOfScenario, argumentsOfScenario, featureTags);
 #line 6
@@ -109,7 +100,7 @@ this.ScenarioInitialize(scenarioInfo);
     testRunner.When("the player starts the game", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 11
-    testRunner.Then(string.Format("the Game creates the map and sets the character position to {0} {1}", characterX, characterY), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("the Game creates the map and sets the character position", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

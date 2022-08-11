@@ -8,9 +8,7 @@ Scenario Outline: Start the Game
 
     Given the character is created
     When the player starts the game
-    Then the Game creates the map and sets the character position to <characterX> <characterY>
-    Examples:
+    Then the Game creates the map and sets the character position
+    
 
-        | characterX | characterY |
-        | 8          | 4          |
-        | 4          | 3          |
+       

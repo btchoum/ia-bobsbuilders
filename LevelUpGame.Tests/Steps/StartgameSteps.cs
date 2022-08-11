@@ -31,23 +31,17 @@ namespace DotNetExample.Tests.Steps
             testObj = new GameController();
             testObj.StartGame();
         }
-        [Then(@"the Game creates the map and sets the character position to (.*) (.*)")]
-        public void ThenTheResultShouldBe(int characterX, int characterY)
+
+        [Then(@"the Game creates the map and sets the character position")]
+        public void ThenTheResultShouldBe()
         {
-            bool xvalid = false;
-            bool yvalid = false;
             int startX = testObj.GetStatus().Position.X;
             int startY = testObj.GetStatus().Position.Y;
-            if (startX >=1 && startX <=10)
-            {
-                xvalid = true;
-            }
-            if (startY >=1 && startY <=10)
-            {
-                yvalid = true;
-            }
-            xvalid.Should().Be(true);
-            yvalid.Should().Be(true);
+
+            startX.Should().BeGreaterThanOrEqualTo(1);
+            startX.Should().BeLessThanOrEqualTo(10);
+            startY.Should().BeGreaterThanOrEqualTo(1);
+            startY.Should().BeLessThanOrEqualTo(10);
         }
     }
 }

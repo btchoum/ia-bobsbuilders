@@ -8,7 +8,7 @@ namespace levelup
 
         public record struct GameStatus(
             // TODO: Add other status data
-            String characterName,
+            string characterName,
             Position Position,
             int MoveCount
         );
@@ -32,7 +32,7 @@ namespace levelup
 
         // Pre-implemented to demonstrate ATDD
         // TODO: Update this if it does not match your design
-        public void CreateCharacter(String name)
+        public void CreateCharacter(string name)
         {
             if (name != null && !name.Equals(""))
             {
@@ -60,6 +60,7 @@ namespace levelup
         {
             //TODO: Implement move - should call something on another class
             //TODO: Should probably also update the game status
+            
         }
 
 

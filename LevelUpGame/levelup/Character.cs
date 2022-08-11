@@ -1,12 +1,8 @@
-using System;
-using levelup;
-
-namespace DotNetExample.Tests.Steps
+namespace levelup
 {
-
-    public class FakeCharacter : ICharacter
+    public class Character : ICharacter
     {
-        // This will be the dummy character for testing
+        // Bob the Builder makes the Monters run away
         public string Name {get;}
         public int MoveCount {get; set;}
         public GameController.Position CurrentPosition {get; set;}

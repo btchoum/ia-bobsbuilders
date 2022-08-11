@@ -3,25 +3,15 @@ using levelup;
 
 namespace DotNetExample.Tests.Steps
 {
-    public interface IMap
-    {
-        string name {get; set;}
-        int xLimit {get; set;}
-        int yLimit {get; set;}
-
-        void calculatePosition(GameController.Position pos, string dir) 
-        validatePosition();
-    
-    }
 
     public class FakeMap : IMap
     {
-        string name {get; set;}
-        int xLimit {get; set;}
-        int yLimit {get; set;}
+       public string name {get; set;}
+       public int xLimit {get; set;}
+       public int yLimit {get; set;}
 
-        void calculatePosition(GameController.Position pos, string dir) {}
-        validatePosition(); 
+       public void calculatePosition(GameController.Position pos, string dir) {}
+  
 
     }
 
