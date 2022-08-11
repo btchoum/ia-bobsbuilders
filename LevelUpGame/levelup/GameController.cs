@@ -9,7 +9,8 @@ namespace levelup
         public record struct GameStatus(
             // TODO: Add other status data
             String characterName,
-            Position Position
+            Position Position,
+            int MoveCount
         );
 
         public record struct Position(

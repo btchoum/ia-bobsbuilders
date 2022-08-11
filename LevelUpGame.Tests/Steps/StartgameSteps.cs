@@ -46,8 +46,8 @@ namespace DotNetExample.Tests.Steps
             {
                 yvalid = true;
             }
-            xvalid.Should.Be(true);
-            yvalid.Should.Be(true);
+            xvalid.Should().Be(true);
+            yvalid.Should().Be(true);
         }
     }
 }

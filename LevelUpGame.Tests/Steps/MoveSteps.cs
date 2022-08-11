@@ -1,8 +1,8 @@
-using TechTalk.SpecFlow;
 using System;
-using NUnit.Framework;
 using FluentAssertions;
 using levelup;
+using NUnit.Framework;
+using TechTalk.SpecFlow;
 
 namespace DotNetExample.Tests.Steps
 {
@@ -47,15 +47,15 @@ namespace DotNetExample.Tests.Steps
         [Then(@"the Game sets the character's newPosition to (.*) (.*)")]
         public void ThenTheGameSetstheCharacterPosition(int endX, int endY) {
 
-           testObj.GetStatus().CurrentPosition.X.Should().Be(endX);
-           testObj.GetStatus().CurrentPosition.Y.Should().Be(endY);
+           testObj.GetStatus().Position.X.Should().Be(endX);
+           testObj.GetStatus().Position.Y.Should().Be(endY);
         }
 
         [Then(@"the game increments the move count to (.*)")]
         public void ThenTheGameIncrementsMoveCount(int endMoves)
         {
             
-            testObj.Character.MoveCount.Should().Be(endMoves);
+            testObj.GetStatus().MoveCount.Should().Be(endMoves);
 
         }
     }
