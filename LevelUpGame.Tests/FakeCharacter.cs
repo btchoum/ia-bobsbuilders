@@ -1,7 +1,7 @@
 using levelup;
 using LevelUpGame.levelup;
 
-namespace DotNetExample.Tests.Steps
+namespace DotNetExample.Tests
 {
     public class FakeCharacter : Character
     {
