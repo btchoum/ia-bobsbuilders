@@ -19,7 +19,7 @@ namespace levelup
         public int MoveCount {get; set;}
         public Position currentPosition {get; set;}
 
-        public void Move(DIRECTION direction, Map map) {
+        public virtual void Move(DIRECTION direction, Map map) {
 
         }
         public Position GetPosition()

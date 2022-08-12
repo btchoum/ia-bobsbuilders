@@ -12,7 +12,7 @@ namespace DotNetExample.Tests
         public DIRECTION LastMoveDirection { get; private set; }
         public Map LastMoveMap { get; private set; }
 
-        public void Move(DIRECTION direction, Map map)
+        public override void Move(DIRECTION direction, Map map)
         {
             LastMoveDirection = direction;
             LastMoveMap = map;
