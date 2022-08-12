@@ -1,3 +1,5 @@
+using LevelUpGame.levelup;
+
 namespace levelup
 {
     public class GameController
@@ -5,39 +7,21 @@ namespace levelup
         // TODO: If your stakeholder wants to call this CHARACTER, change var name for
         // low representational gap
         public readonly string DEFAULT_CHARACTER_NAME = "Character";
-        private IMap _map;
-        private ICharacter _character;
-
-
-        public record struct GameStatus(
-            // TODO: Add other status data
-            string characterName,
-            Position Position,
-            int MoveCount
-        );
-
-        public record struct Position(
-            int X, int Y
-        );
-
-        // TODO: Ensure this AND CLI commands match domain model
-        public enum DIRECTION
-        {
-            NORTH, SOUTH, EAST, WEST
-        }
+        private Map _map;
+        private Character _character;
 
         GameStatus status = new GameStatus();
 
         public GameController() : this(new Map(), new Character())
         {
-            
+
         }
 
-        public GameController(IMap map, ICharacter character){
-        _map = map;
-        _character = character;
-        status.characterName = DEFAULT_CHARACTER_NAME;
-
+        public GameController(Map map, Character character)
+        {
+            _map = map;
+            _character = character;
+            status.characterName = DEFAULT_CHARACTER_NAME;
         }
 
         // Pre-implemented to demonstrate ATDD
@@ -70,11 +54,7 @@ namespace levelup
         {
             //TODO: Implement move - should call something on another class
             //TODO: Should probably also update the game status
-            
+
         }
-
-
-
-
     }
 }

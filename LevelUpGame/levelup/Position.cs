@@ -1,8 +1,6 @@
 namespace levelup
 {
-    public class Position
-    {
-        private int x {get;}
-        private int y {get;}
-    }
+    public record struct Position(
+        int X, int Y
+    );
 }

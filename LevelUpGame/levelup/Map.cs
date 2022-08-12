@@ -1,15 +1,16 @@
+using LevelUpGame.levelup;
+
 namespace levelup
 {
- 
-    public class Map : IMap
+    public class Map
     {
         public string name {get;}
         private int xLimit;
         private int yLimit;
 
-        public Position calculatePosition( Position pos, String dir) 
+        public Position calculatePosition(Position pos, DIRECTION dir) 
         {
-            return null;
+            return new Position(0, 0);
         }
 
         private bool validatePosition()

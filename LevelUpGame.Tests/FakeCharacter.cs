@@ -1,20 +1,20 @@
 using System;
 using levelup;
+using LevelUpGame.levelup;
 
 namespace DotNetExample.Tests.Steps
 {
-
-    public class FakeCharacter : ICharacter
+    public class FakeCharacter : Character
     {
         // This will be the dummy character for testing
         public string Name {get;}
         public int MoveCount {get; set;}
-        public GameController.Position CurrentPosition {get; set;}
-        public GameController.DIRECTION LastMoveDirection {get; private set;}
-        public IMap LastMoveMap {get; private set;}
+        public Position CurrentPosition {get; set;}
+        public DIRECTION LastMoveDirection {get; private set;}
+        public Map LastMoveMap {get; private set;}
 
 
-        public void Move( GameController.DIRECTION direction, IMap map) {
+        public void Move( DIRECTION direction, Map map) {
             LastMoveDirection = direction;
             LastMoveMap = map;
         }
@@ -23,7 +23,7 @@ namespace DotNetExample.Tests.Steps
         {
         }
 
-        private void updatePosition(GameController.Position newPosition)
+        private void updatePosition(Position newPosition)
         {
         }
 

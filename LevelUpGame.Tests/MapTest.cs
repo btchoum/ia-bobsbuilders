@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using levelup;
+using LevelUpGame.levelup;
 
 namespace DotNetExample.Tests.Steps;
 
@@ -11,8 +12,8 @@ namespace DotNetExample.Tests.Steps;
         {
             Map map = new Map();
             Position pos = new Position();
-            Position newPos = map.calculatePosition(pos, 1);
-            Assert.assertEquals(newPos.x, 2);
+            Position newPos = map.calculatePosition(pos, DIRECTION.EAST);
+            Assert.AreEqual(2, newPos.X);
         }
 
     }

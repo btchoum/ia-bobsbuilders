@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using levelup;
+using FluentAssertions;
 
 namespace DotNetExample.Tests.Unit
 {
@@ -20,10 +21,10 @@ namespace DotNetExample.Tests.Unit
 
 #pragma warning disable CS8602 // Rethrow to preserve stack details
             Assert.IsNotNull(testObj.CurrentPosition);
-            testObj.CurrentPosition.Position.X.Should().BeGreaterThanOrEqualTo(1);
-            testObj.CurrentPosition.Position.X.Should().BeLessThanOrEqualTo(10);
-            testObj.CurrentPosition.Position.Y.Should().BeGreaterThanOrEqualTo(1);
-            testObj.CurrentPosition.Position.Y.Should().BeLessThanOrEqualTo(10);
+            testObj.CurrentPosition.X.Should().BeGreaterThanOrEqualTo(1);
+            testObj.CurrentPosition.X.Should().BeLessThanOrEqualTo(10);
+            testObj.CurrentPosition.Y.Should().BeGreaterThanOrEqualTo(1);
+            testObj.CurrentPosition.Y.Should().BeLessThanOrEqualTo(10);
             
         }
     }

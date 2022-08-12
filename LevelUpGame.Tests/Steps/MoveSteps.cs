@@ -1,6 +1,7 @@
 using System;
 using FluentAssertions;
 using levelup;
+using LevelUpGame.levelup;
 using NUnit.Framework;
 using TechTalk.SpecFlow;
 
@@ -37,7 +38,7 @@ namespace DotNetExample.Tests.Steps
 
         //TODO: come back and finish this method ...
         [When(@"the character inputs a (.*)")]
-        public void WhenTheCharacterMovesInDirection (GameController.DIRECTION direction)
+        public void WhenTheCharacterMovesInDirection (DIRECTION direction)
         {
             
             this.testObj.Move(direction);
