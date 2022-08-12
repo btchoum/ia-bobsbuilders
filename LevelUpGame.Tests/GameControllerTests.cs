@@ -18,34 +18,35 @@ public class GameControllerTests
         gameController.Move(DIRECTION.NORTH);
 
         characterSpy.LastMoveDirection.Should().Be(DIRECTION.NORTH);
-       // characterSpy.LastMoveMap.Should().Be(map);
+       characterSpy.LastMoveMap.Should().Be(map);
     }
 
     [Test]
     public void MoveShouldUpdateGameStatus()
     {
-      
         FakeMap map = new FakeMap();
-        FakeCharacter characterSpy = new FakeCharacter();
+        FakeCharacter fakeCharacter = new FakeCharacter();
 
-        GameController gameController = new GameController(map, characterSpy);
-        
-        GameStatus gameStatus = gameController.GetStatus();
+        var expectedMoveCount = 25;
+        var expectedPosition = new Position(1, 1);
+        fakeCharacter.InjectMoveCount(expectedMoveCount);
+        fakeCharacter.InjectPosition(expectedPosition);
+
+        GameController gameController = new GameController(map, fakeCharacter);
       
         gameController.Move(DIRECTION.NORTH);
+      
+        GameStatus gameStatus = gameController.GetStatus();
 
-        gameStatus.MoveCount.Should().Be(25);
-        
-     //   characterSpy.LastMoveDirection.Should().Be(DIRECTION.NORTH);
-     //   characterSpy.LastMoveMap.Should().Be(map);
-
+        gameStatus.MoveCount.Should().Be(expectedMoveCount);
+        gameStatus.Position.Should().Be(expectedPosition);
     }
     
-    public class TestableGameController : GameController
-    {
-        public TestableGameController(Map map, Character character) : base(map, character)
-        {
+    //public class TestableGameController : GameController
+    //{
+    //    public TestableGameController(Map map, Character character) : base(map, character)
+    //    {
 
-        }
-    }
+    //    }
+    //}
 }

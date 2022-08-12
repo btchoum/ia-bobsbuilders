@@ -7,8 +7,8 @@ namespace DotNetExample.Tests
     {
         // This will be the dummy character for testing
         public string Name { get; }
-        public int MoveCount { get; set; }
-        public Position CurrentPosition { get; set; }
+        public override int MoveCount { get; set; }
+        public override Position CurrentPosition { get; set; }
         public DIRECTION LastMoveDirection { get; private set; }
         public Map LastMoveMap { get; private set; }
 

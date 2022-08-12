@@ -53,8 +53,8 @@ namespace levelup
         public void Move(DIRECTION directionToMove)
         {
             _character.Move(directionToMove, _map);
-            //TODO: Should probably also update the game status
-            
+
+            status = new GameStatus(_character.Name, _character.CurrentPosition, _character.MoveCount);
         }
     }
 }

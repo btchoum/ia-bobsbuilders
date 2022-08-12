@@ -16,23 +16,21 @@ namespace levelup
         }
 
         public string? Name {get; set;}
-        public int MoveCount {get; set;}
-        public Position currentPosition {get; set;}
+        public virtual int MoveCount {get; set;}
+        public virtual Position CurrentPosition {get; set;}
 
-        public virtual void Move(DIRECTION direction, Map map) {
-
-        }
-        public Position GetPosition()
+        public virtual void Move(DIRECTION direction, Map map) 
         {
-            return new Position(0,0);
+
         }
+
         private void IncrementMoveCount()
         {
         }
 
         private void updatePosition(Position newPosition)
         {
-            currentPosition = newPosition;
+            CurrentPosition = newPosition;
         }
     }
 }
