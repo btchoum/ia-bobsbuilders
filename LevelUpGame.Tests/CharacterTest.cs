@@ -17,8 +17,11 @@ namespace DotNetExample.Tests
             Position startPosition = testGameController.GetStatus().Position;
             testObj.Move(DIRECTION.EAST,fakemap);
             Position endPosition = testGameController.GetStatus().Position;
-            endPosition.X.Should().Be(startPosition.X++);
-            endPosition.Y.Should().Be(startPosition.Y);
+            int testPosition = (int)(startPosition.X) + 1; 
+
+            Assert.AreEqual((int)(endPosition.X),testPosition);
+            Assert.AreEqual((int)(endPosition.Y),(int)(startPosition.Y));
+
         }
 
     }
