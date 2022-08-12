@@ -12,18 +12,28 @@ namespace DotNetExample.Tests
         public DIRECTION LastMoveDirection { get; private set; }
         public Map LastMoveMap { get; private set; }
 
+        public void InjectMoveCount(int moveCount)
+        {
+            MoveCount = moveCount;
+        }
+
+        public void InjectPosition(Position position)
+        {
+            CurrentPosition = position;
+        }
+
         public override void Move(DIRECTION direction, Map map)
         {
             LastMoveDirection = direction;
             LastMoveMap = map;
         }
 
-        private void IncrementMoveCount()
-        {
-        }
+        //private void IncrementMoveCount()
+        //{
+        //}
 
-        private void UpdatePosition(Position newPosition)
-        {
-        }
+        //private void UpdatePosition(Position newPosition)
+        //{
+        //}
     }
 }
