@@ -53,8 +53,8 @@ namespace levelup
         public void Move(DIRECTION directionToMove)
         {
             //TODO: Implement move - should call something on another class
+            _character.Move(directionToMove, _map);
             //TODO: Should probably also update the game status
-
         }
     }
 }

@@ -11,7 +11,7 @@ public class GameControllerTests
     [Test]
     public void MoveShouldMoveTheCharacter()
     {
-        Map map = new FakeMap();
+        FakeMap map = new FakeMap();
         FakeCharacter characterSpy = new FakeCharacter();
 
         GameController gameController = new GameController(map, characterSpy);
