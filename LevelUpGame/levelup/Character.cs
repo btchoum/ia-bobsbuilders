@@ -9,10 +9,12 @@ namespace levelup
         {
             init();
         }
+
         private void init()
         {
-            this.Name = String.Empty;
+            this.Name = string.Empty;
         }
+
         public string? Name {get; set;}
         public int MoveCount {get; set;}
         public Position CurrentPosition {get; set;}
@@ -26,6 +28,5 @@ namespace levelup
         private void updatePosition(Position newPosition)
         {
         }
-
     }
 }

@@ -1,9 +1,7 @@
-using System;
 using levelup;
 
 namespace DotNetExample.Tests.Steps
 {
-
     public class FakeMap : Map
     {
        public string name {get; set;}
@@ -12,9 +10,5 @@ namespace DotNetExample.Tests.Steps
        {
             return new Position(0, 0); 
        }
-  
-
     }
-
-
 }

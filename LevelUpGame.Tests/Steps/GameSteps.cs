@@ -12,7 +12,7 @@ namespace DotNetExample.Tests.Steps
         // private readonly ScenarioContext _scenarioContext;
         private GameController testObj = new GameController();
 
-        private String characterName = "";
+        private string characterName = "";
 
         public GameSteps(ScenarioContext scenarioContext)
         {

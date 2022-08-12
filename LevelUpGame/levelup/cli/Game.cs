@@ -6,7 +6,7 @@ class Game
 {
     static GameController gameController = new GameController();
     static List<GameStatus> gameHistory = new List<GameStatus>();
-    static Boolean isGameStarted = false;
+    static bool isGameStarted = false;
 
     public enum startingMenuCommands
     {
