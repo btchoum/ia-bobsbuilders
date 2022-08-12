@@ -4,11 +4,18 @@ namespace DotNetExample.Tests
 {
     public class FakeMap : Map
     {
-       public string? Name {get; set;}
+        private Position _position;
 
-       public Position CalculatePosition(Position pos, string dir) 
-       {
-            return new Position(0, 0); 
-       }
+        public string? Name { get; set; }
+
+        public Position CalculatePosition(Position pos, string dir)
+        {
+            return _position;
+        }
+
+        public void CalculatePositionShouldReturn(Position position)
+        {
+            _position = position;
+        }
     }
 }
