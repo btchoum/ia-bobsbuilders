@@ -8,6 +8,7 @@ namespace DotNetExample.Tests
 {
     public class CharacterTest
     {
+        [Ignore("Move functionality not yet implemented")]
         [Test]
         public void MoveTest()
         {
