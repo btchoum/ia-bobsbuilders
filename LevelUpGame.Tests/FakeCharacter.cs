@@ -22,7 +22,7 @@ namespace DotNetExample.Tests.Steps
         {
         }
 
-        private void updatePosition(Position newPosition)
+        private void UpdatePosition(Position newPosition)
         {
         }
     }

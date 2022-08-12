@@ -2,7 +2,7 @@
 {
     public record struct GameStatus(
         // TODO: Add other status data
-        string characterName,
+        string CharacterName,
         Position Position,
         int MoveCount
     );

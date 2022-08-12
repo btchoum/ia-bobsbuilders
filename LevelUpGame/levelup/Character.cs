@@ -7,12 +7,12 @@ namespace levelup
         // Bob the Builder makes the Monters run away
         public Character()
         {
-            init();
+            Init();
         }
 
-        private void init()
+        private void Init()
         {
-            this.Name = string.Empty;
+            Name = string.Empty;
         }
 
         public string? Name {get; set;}

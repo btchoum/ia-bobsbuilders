@@ -41,7 +41,7 @@ namespace DotNetExample.Tests.Steps
         public void WhenTheCharacterMovesInDirection (DIRECTION direction)
         {
             
-            this.testObj.Move(direction);
+            testObj.Move(direction);
            
         }
 

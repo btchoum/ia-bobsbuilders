@@ -21,7 +21,7 @@ namespace levelup
         {
             _map = map;
             _character = character;
-            status.characterName = DEFAULT_CHARACTER_NAME;
+            status.CharacterName = DEFAULT_CHARACTER_NAME;
         }
 
         // Pre-implemented to demonstrate ATDD
@@ -30,11 +30,11 @@ namespace levelup
         {
             if (name != null && !name.Equals(""))
             {
-                this.status.characterName = name;
+                status.CharacterName = name;
             }
             else
             {
-                this.status.characterName = DEFAULT_CHARACTER_NAME;
+                status.CharacterName = DEFAULT_CHARACTER_NAME;
             }
         }
 
@@ -47,7 +47,7 @@ namespace levelup
 
         public GameStatus GetStatus()
         {
-            return this.status;
+            return status;
         }
 
         public void Move(DIRECTION directionToMove)
